@@ -1,8 +1,10 @@
-const { transforms, shortcodes } = require('./src/_11ty')
+const { transforms, shortcodes, plugins } = require('./src/_11ty')
 
 module.exports = eleventyConfig => {
   // Layout aliases
-  eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
+  for (const name of ['home', 'page']) {
+    eleventyConfig.addLayoutAlias(name, `layouts/${name}.njk`)
+  }
 
   // Passthroughs
   eleventyConfig.addPassthroughCopy('./src/CNAME')
@@ -15,6 +17,11 @@ module.exports = eleventyConfig => {
   // Shortcodes
   for (const name of Object.keys(shortcodes)) {
     eleventyConfig.addShortcode(name, shortcodes[name])
+  }
+
+  // Plugins
+  for (const plugin of plugins) {
+    eleventyConfig.addPlugin(plugin)
   }
 
   return {

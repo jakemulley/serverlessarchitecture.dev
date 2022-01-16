@@ -4,5 +4,8 @@ module.exports = {
   },
   shortcodes: {
     now: require('./shortcodes/now')
-  }
+  },
+  plugins: [
+    require('@11ty/eleventy-navigation')
+  ]
 }
