@@ -1,0 +1,21 @@
+{
+  "name": "serverlessarchitecture.dev",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Guides and reference architectures for serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakemulley/serverlessarchitecture.dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakemulley/serverlessarchitecture.dev/issues"
+  },
+  "homepage": "https://github.com/jakemulley/serverlessarchitecture.dev#readme"
+}
