@@ -5,7 +5,14 @@ module.exports = {
   shortcodes: {
     now: require('./shortcodes/now')
   },
-  plugins: [
-    require('@11ty/eleventy-navigation')
-  ]
+  libraries: {
+    md: require('./libraries/markdown')
+  },
+  plugins: {
+    '@11ty/eleventy-navigation': null,
+    'eleventy-plugin-toc': {
+      tags: ['h2'],
+      wrapperClass: 'prose-ol:pl-0 prose-li:list-none prose-li:pl-0'
+    }
+  }
 }
