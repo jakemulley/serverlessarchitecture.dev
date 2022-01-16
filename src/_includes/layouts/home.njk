@@ -1,0 +1,33 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  {{ content | safe }}
+
+  {% set sections = collections.all | eleventyNavigation %}
+
+  {% for section in sections %}
+    {% if section.url !== "/" %}
+      <ul class="divide-y mb-4">
+        <li class="flex items-baseline py-4">
+          <h2 class="text-lg font-semibold">{{ section.title }}</h2>
+          <span class="ml-2"><a href="{{ section.url }}">View all &rarr;</a></span>
+        </li>
+
+        {% for child in section.children %}
+          <li>
+            <a href="{{ child.url }}" class="block py-4 flex items-center justify-between">
+              <div>
+                <h3 class="font-medium">{{ child.title }}</h3>
+                {% if child.tagline %}
+                  <p class="text-sm text-gray-600">{{ child.tagline }}</p>
+                {% endif %}
+              </div>
+              <span>&rarr;</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+
+{% endblock %}
