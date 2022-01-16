@@ -1,33 +1,39 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  {{ content | safe }}
-
   {% set sections = collections.all | eleventyNavigation %}
 
-  {% for section in sections %}
-    {% if section.url !== "/" %}
-      <ul class="divide-y mb-4">
-        <li class="flex items-baseline py-4">
-          <h2 class="text-lg font-semibold">{{ section.title }}</h2>
-          <span class="ml-2"><a href="{{ section.url }}">View all &rarr;</a></span>
-        </li>
+  <div class="space-y-8">
+    <header class="prose pb-6 border-b">
+      <h1>Welcome to {{ site.title }}</h1>
+      <p class="lead">{{ tagline }}</p>
+    </header>
 
-        {% for child in section.children %}
-          <li>
-            <a href="{{ child.url }}" class="block py-4 flex items-center justify-between">
-              <div>
-                <h3 class="font-medium">{{ child.title }}</h3>
-                {% if child.tagline %}
-                  <p class="text-sm text-gray-600">{{ child.tagline }}</p>
-                {% endif %}
-              </div>
-              <span>&rarr;</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
+    {% for section in sections %}
+      {% if section.url !== "/" %}
+        <section>
+          <div class="flex items-baseline pb-4">
+            <h2 class="text-2xl font-bold">{{ section.title }}</h2>
+            <a href="{{ section.url }}" class="ml-4 hover:underline">View all <span class="sr-only">"{{ section.title }}" articles</span> &rarr;</a>
+          </div>
 
+          <ul class="divide-y border rounded-md overflow-hidden">
+            {% for child in section.children %}
+              <li>
+                <a href="{{ child.url }}" class="block p-4 flex items-center justify-between hover:bg-gray-100">
+                  <div>
+                    <h3 class="font-medium">{{ child.title }}</h3>
+                    {% if child.tagline %}
+                      <p class="text-sm text-gray-600">{{ child.tagline }}</p>
+                    {% endif %}
+                  </div>
+                  <span>&rarr;</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
 {% endblock %}
