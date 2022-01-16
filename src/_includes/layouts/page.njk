@@ -1,5 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  {{ content | safe }}
+  <article class="prose">
+    {{ content | safe }}
+  </article>
 {% endblock %}
