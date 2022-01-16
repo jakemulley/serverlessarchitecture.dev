@@ -1,10 +1,15 @@
+{% set pageTitle = [ title, site.title ] %}
+{% if page.url == "/" %}
+  {% set pageTitle = [ site.title ] %}
+{% endif %}
+
 <!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Serverless Architecture</title>
+  <title>{{ pageTitle | join(" | ") }}</title>
   <link rel="stylesheet" href="/css/style.css?v={% now %}">
 </head>
 
