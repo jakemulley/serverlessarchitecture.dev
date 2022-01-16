@@ -5,7 +5,8 @@
   "description": "Guides and reference architectures for serverless",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ELEVENTY_ENV=production npx eleventy",
+    "serve": "ELEVENTY_ENV=development npx eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jakemulley/serverlessarchitecture.dev/issues"
   },
-  "homepage": "https://github.com/jakemulley/serverlessarchitecture.dev#readme"
+  "homepage": "https://github.com/jakemulley/serverlessarchitecture.dev#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
 }
