@@ -8,70 +8,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Introduction to serverless | Serverless Architecture</title>
-  <link rel="stylesheet" href="/css/style.css?v=1642453409345">
+  <link rel="stylesheet" href="/css/style.css?v=1642460288438">
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
   <div class="flex flex-col min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 divide-y-2">
     <header class="py-4 sm:py-6 lg:py-8">
       <a href="/" class="text-xl font-semibold hover:underline">Serverless Architecture</a>
     </header>
-    <main class="flex-grow py-8">
+    <main class="flex-grow py-8 divide-y">
+      <header class="prose prose-slate dark:prose-invert pb-8">
+        
 
-      <!-- Breadcrumbs -->
-      
-      
-        <nav class="mb-6 text-sm hidden md:block" aria-label="Breadcrumb">
-          <ol class="flex items-center space-x-6">
-            <li>
-              <div class="flex items-center">
-                <a href="/" class="text-gray-500 hover:text-gray-700">
-                  <div class="w-5 h-5"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg> <span class="sr-only">Home</span></div>
-                </a>
-              </div>
-            </li>
-            
+        
+          <!-- Breadcrumbs -->
+          <nav class="not-prose mb-6 text-sm hidden md:block">
+            <ol class="flex space-x-3">
               
-                <li>
-              
-                <div class="flex items-center">
-                  <a href="/getting-started/" class="text-gray-500 hover:text-gray-700">Getting started with serverless</a>
-                </div>
-              </li>
-            
-              
-                <li aria-current="page">
-              
-                <div class="flex items-center">
-                  <a href="/getting-started/introduction/" class="text-gray-500 hover:text-gray-700">Introduction to serverless</a>
-                </div>
-              </li>
-            
-          </ol>
-        </nav>
-      
-      <!-- Breadcrumbs -->
+              <li class="after:content-[&#39;/&#39;] after:ml-3"><a href="" class="hover:underline">Serverless Architecture</a></li>
 
-      <!-- Content -->
-      
+              
+                
 
-  <div class="prose">
-    <header class="pb-4 mb-4 border-b">
-      <h1>Introduction to serverless</h1>
-      <p class="lead">Learn what serverless is, the advantages and disadvantages of serverless, and when to use it.</p>
+                <li class="after:content-[&#39;/&#39;] after:ml-3"><a href="/getting-started/" class="hover:underline">Getting started with serverless</a></li>
+              
+                
+                  
+                
 
-      
-        <aside class="mb-8 text-sm">
-          <strong>In this article:</strong>
-          <nav class="prose-ol:pl-0 prose-li:list-none prose-li:pl-0" >
+                <li class="text-slate-500"><a href="/getting-started/introduction/" class="hover:underline">Introduction to serverless</a></li>
+              
+            </ol>
+          </nav>
+          <!-- Breadcrumbs -->
+        
+
+        <h1>Introduction to serverless</h1>
+        <p class="lead">Learn what serverless is, the advantages and disadvantages of serverless, and when to use it.</p>
+
+        
+          <aside class="text-sm">
+            <strong>In this article:</strong>
+
+            <nav class="prose-ol:pl-0 prose-li:list-none prose-li:pl-0" >
         <ol><li><a href="#what-is-serverless">What is serverless?</a></li><li><a href="#advantages-of-serverless">Advantages of serverless</a></li><li><a href="#disadvantages-of-serverless">Disadvantages of serverless</a></li></ol>
       </nav>
-        </aside>
-      
-    </header>
+          </aside>
+        
+      </header>
 
-    <article>
-      <h2 id="what-is-serverless" tabindex="-1">What is serverless?</h2>
+      <!-- Content -->
+      <div class="pt-8">
+        
+  <article class="prose prose-slate dark:prose-invert">
+    <h2 id="what-is-serverless" tabindex="-1">What is serverless?</h2>
 <p>Serverless (short for &quot;serverless computing&quot;) is a cloud-native architectural pattern. It allows developers to focus on developing and running applications and services in the cloud, without having to manage the underlying servers. Serverless is still backed by servers, but the management is abstracted away to a cloud provider, such as <a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a>, <a href="https://azure.microsoft.com">Microsoft Azure (Azure)</a>, or <a href="https://cloud.google.com">Google Cloud Platform (GCP)</a>.</p>
 <p>Utilising serverless architecture offsets the need for a developer to provision, maintain, and scale servers. This includes the maintenance, patching, capacity planning and management, scalability, and availability of servers.</p>
 <p>Historically, &quot;serverless&quot; has been synonymous with &quot;<a href="https://en.wikipedia.org/wiki/Function_as_a_service">Function as a Service</a>&quot; (FaaS). More recently, cloud providers have started to offer serverless equivalents of traditional infrastructure, such as databases, queuing systems, event buses, blob storage, and API gateways.</p>
@@ -130,10 +120,9 @@
 <p>Depending on the use case for serverless, it can end up being more expensive than traditional infrastructure. An example of this is if you have a reliable, consistent traffic pattern. It may be cheaper to buy a virtual machine to run your service on.</p>
 <p>Although, it does depend on the context and the use case. For example, the time saved by not managing servers may offset the increased costs.</p>
 
-    </article>
-  </div>
+  </article>
 
-
+      </div>
       <!-- Content -->
     </main>
     <footer class="text-sm py-2 sm:py-4">
