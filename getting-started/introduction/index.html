@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Introduction to serverless | Serverless Architecture</title>
-  <link rel="stylesheet" href="/css/style.css?v=1642441619113">
+  <link rel="stylesheet" href="/css/style.css?v=1642453409345">
 </head>
 
 <body class="antialiased">
@@ -64,7 +64,7 @@
         <aside class="mb-8 text-sm">
           <strong>In this article:</strong>
           <nav class="prose-ol:pl-0 prose-li:list-none prose-li:pl-0" >
-        <ol><li><a href="#what-is-serverless">What is serverless?</a></li><li><a href="#advantages-of-serverless">Advantages of serverless</a></li></ol>
+        <ol><li><a href="#what-is-serverless">What is serverless?</a></li><li><a href="#advantages-of-serverless">Advantages of serverless</a></li><li><a href="#disadvantages-of-serverless">Disadvantages of serverless</a></li></ol>
       </nav>
         </aside>
       
@@ -104,6 +104,31 @@
 <h3 id="reduced-security-risk" tabindex="-1">Reduced security risk</h3>
 <p>With serverless, you're not managing the server itself. This can reduce your security risk by having one less thing to patch (the server) and allows you to focus on application security instead.</p>
 <p>The management of the operating system, hardware, and local dependencies is managed by a cloud provider, who would also typically have more skill and expertise to ensure security in depth.</p>
+<h2 id="disadvantages-of-serverless" tabindex="-1">Disadvantages of serverless</h2>
+<p>Whilst serverless has many advantages, it also has some disadvantages and different ways of doing things compared to traditional infrastructure. The disadvantages below are common gotchas to be aware of and depend on the context of how serverless infrastructure is used.</p>
+<h3 id="learning-curve" tabindex="-1">Learning curve</h3>
+<p>Serverless requires a different mindset to traditional infrastructure. With traditional infrastructure, the concepts are largely the same - running software on virtual machines. Serverless has a different way of doing things, and is largely event-driven. This means you need to shift your focus closer to the events that trigger something that is running on serverless infrastructure (e.g. a HTTP request triggering a function).</p>
+<p>Best practices in serverless are also different. For example, functions running on Function-as-a-Service infrastructure should do one thing, one thing well, and be small. This is to mitigate other disadvantages, like cold start times.</p>
+<h3 id="monitoring-and-debugging" tabindex="-1">Monitoring and debugging</h3>
+<p>Serverless makes it harder to monitor requests and responses end-to-end using traditional monitoring tools. Monitoring becomes distributed, and debugging can end up relying on reverse engineering log traces to find the root cause of an issue.</p>
+<h3 id="local-testing" tabindex="-1">Local testing</h3>
+<p>As serverless removes the need and ability to manage or see anything other than your application code, you have no visibility of the backend processes. This makes it harder (not impossible) to locally test your application as you can't replicate the infrastructure locally.</p>
+<p>One way to mitigate this is to always deploy your code, and test it with the serverless service you are using.</p>
+<h3 id="different-security-and-compliance-concerns" tabindex="-1">Different security and compliance concerns</h3>
+<p>With serverless, as the management of underlying infrastructure is abstracted away to a cloud provider, you are relying on the cloud provider to implement security measures well. Further, you can't perform a penetration test on the underlying server, because you don't have access to it.</p>
+<p>Serverless also tends to use servers that are multi-tenancy. This can be an issue for compliance and legal reasons in highly regulated industries.</p>
+<h3 id="long-running-processes-have-limitations" tabindex="-1">Long running processes have limitations</h3>
+<p>Certain serverless implementations, for example Function-as-a-Service (FaaS), have limitations around long running processes. FaaS tends to have a timeout of less than 30 minutes, which makes it impossible to run long running tasks.</p>
+<p>Further, as serverless providers charge for the amount of time code is running, it could end up costing more to run long-running processes using serverless compared to traditional infrastructure.</p>
+<h3 id="cold-starts" tabindex="-1">Cold starts</h3>
+<p>Cold starts can be an issue in serverless. As serverless infrastructure will scale down to zero when an application is not in use; it may require a cold start when an event invokes the application. This can sometimes be a few seconds.</p>
+<p>Although, if a piece of code is used regularly, it will be warm - which means you eliminate the cold start.</p>
+<h3 id="vendor-lock-in" tabindex="-1">Vendor lock-in</h3>
+<p>Serverless infrastructure tends to be tightly coupled and integrated with cloud provider services and APIs. This can create vendor lock-in, as serverless implementations are non-typical and can vary between cloud providers.</p>
+<p>Although, it's important to note that there is always a level of vendor lock-in when utilising a cloud provider, serverless or not.</p>
+<h3 id="costs" tabindex="-1">Costs</h3>
+<p>Depending on the use case for serverless, it can end up being more expensive than traditional infrastructure. An example of this is if you have a reliable, consistent traffic pattern. It may be cheaper to buy a virtual machine to run your service on.</p>
+<p>Although, it does depend on the context and the use case. For example, the time saved by not managing servers may offset the increased costs.</p>
 
     </article>
   </div>
