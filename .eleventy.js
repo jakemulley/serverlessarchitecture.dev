@@ -2,7 +2,7 @@ const { transforms, shortcodes, plugins, libraries } = require('./src/_11ty')
 
 module.exports = eleventyConfig => {
   // Layout aliases
-  for (const name of ['home', 'page']) {
+  for (const name of ['home', 'page', 'list']) {
     eleventyConfig.addLayoutAlias(name, `layouts/${name}.njk`)
   }
 
