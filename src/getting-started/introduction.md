@@ -68,3 +68,53 @@ Since serverless reduces your operational overhead (i.e. server management), it 
 With serverless, you're not managing the server itself. This can reduce your security risk by having one less thing to patch (the server) and allows you to focus on application security instead.
 
 The management of the operating system, hardware, and local dependencies is managed by a cloud provider, who would also typically have more skill and expertise to ensure security in depth.
+
+## Disadvantages of serverless
+
+Whilst serverless has many advantages, it also has some disadvantages and different ways of doing things compared to traditional infrastructure. The disadvantages below are common gotchas to be aware of and depend on the context of how serverless infrastructure is used.
+
+### Learning curve
+
+Serverless requires a different mindset to traditional infrastructure. With traditional infrastructure, the concepts are largely the same - running software on virtual machines. Serverless has a different way of doing things, and is largely event-driven. This means you need to shift your focus closer to the events that trigger something that is running on serverless infrastructure (e.g. a HTTP request triggering a function).
+
+Best practices in serverless are also different. For example, functions running on Function-as-a-Service infrastructure should do one thing, one thing well, and be small. This is to mitigate other disadvantages, like cold start times.
+
+### Monitoring and debugging
+
+Serverless makes it harder to monitor requests and responses end-to-end using traditional monitoring tools. Monitoring becomes distributed, and debugging can end up relying on reverse engineering log traces to find the root cause of an issue.
+
+### Local testing
+
+As serverless removes the need and ability to manage or see anything other than your application code, you have no visibility of the backend processes. This makes it harder (not impossible) to locally test your application as you can't replicate the infrastructure locally.
+
+One way to mitigate this is to always deploy your code, and test it with the serverless service you are using.
+
+### Different security and compliance concerns
+
+With serverless, as the management of underlying infrastructure is abstracted away to a cloud provider, you are relying on the cloud provider to implement security measures well. Further, you can't perform a penetration test on the underlying server, because you don't have access to it.
+
+Serverless also tends to use servers that are multi-tenancy. This can be an issue for compliance and legal reasons in highly regulated industries.
+
+### Long running processes have limitations
+
+Certain serverless implementations, for example Function-as-a-Service (FaaS), have limitations around long running processes. FaaS tends to have a timeout of less than 30 minutes, which makes it impossible to run long running tasks.
+
+Further, as serverless providers charge for the amount of time code is running, it could end up costing more to run long-running processes using serverless compared to traditional infrastructure.
+
+### Cold starts
+
+Cold starts can be an issue in serverless. As serverless infrastructure will scale down to zero when an application is not in use; it may require a cold start when an event invokes the application. This can sometimes be a few seconds.
+
+Although, if a piece of code is used regularly, it will be warm - which means you eliminate the cold start.
+
+### Vendor lock-in
+
+Serverless infrastructure tends to be tightly coupled and integrated with cloud provider services and APIs. This can create vendor lock-in, as serverless implementations are non-typical and can vary between cloud providers.
+
+Although, it's important to note that there is always a level of vendor lock-in when utilising a cloud provider, serverless or not.
+
+### Costs
+
+Depending on the use case for serverless, it can end up being more expensive than traditional infrastructure. An example of this is if you have a reliable, consistent traffic pattern. It may be cheaper to buy a virtual machine to run your service on.
+
+Although, it does depend on the context and the use case. For example, the time saved by not managing servers may offset the increased costs.
