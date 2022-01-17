@@ -2,29 +2,22 @@
 
 {% block content %}
 
-  <div class="prose">
-    <header class="pb-4 mb-4 border-b">
-      <h1>{{ title }}</h1>
-      <p class="lead">{{ tagline }}</p>
-    </header>
+  {% set sections = collections.all | eleventyNavigation %}
 
-    {% set sections = collections.all | eleventyNavigation %}
+  {% for section in sections %}
+    {% if section.title === title %}
+      <nav class="space-y-4">
+        <h2 class="font-semibold text-lg">In this section</h2>
 
-    {% for section in sections %}
-      {% if section.title === title %}
-        {% set list = section %}
-
-        <div class="not-prose">
-          <h2 class="text-lg font-bold mt-4 py-4">This section contains:</h2>
-
-          <ol class="space-y-2">
-            {% for child in list.children %}
-              <li><a href="{{ child.url }}" class="block px-2 py-1 rounded hover:bg-gray-100">{{ child.title }}</a></li>
-            {% endfor %}
-          </ol>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+        <ul class="space-y-2">
+          {% for child in section.children %}
+            <li>
+              <a href="{{ child.url }}" class="underline bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 p-2 overflow-hidden rounded-md inline-block">{{ child.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  {% endfor %}
 
 {% endblock %}
