@@ -3,7 +3,8 @@ module.exports = {
     css: require('./transforms/css')
   },
   shortcodes: {
-    now: require('./shortcodes/now')
+    now: require('./shortcodes/now'),
+    icon: require('./shortcodes/icon')
   },
   libraries: {
     md: require('./libraries/markdown')
