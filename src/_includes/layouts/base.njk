@@ -13,44 +13,51 @@
   <link rel="stylesheet" href="/css/style.css?v={% now %}">
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
   <div class="flex flex-col min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 divide-y-2">
     <header class="py-4 sm:py-6 lg:py-8">
       <a href="/" class="text-xl font-semibold hover:underline">{{ site.title }}</a>
     </header>
-    <main class="flex-grow py-8">
+    <main class="flex-grow py-8 divide-y">
+      <header class="prose prose-slate dark:prose-invert pb-8">
+        {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
 
-      <!-- Breadcrumbs -->
-      {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
-      {% if breadcrumbs.length > 0 %}
-        <nav class="mb-6 text-sm hidden md:block" aria-label="Breadcrumb">
-          <ol class="flex items-center space-x-6">
-            <li>
-              <div class="flex items-center">
-                <a href="/" class="text-gray-500 hover:text-gray-700">
-                  <div class="w-5 h-5">{% icon "fas", "home" | safe %} <span class="sr-only">Home</span></div>
-                </a>
-              </div>
-            </li>
-            {% for crumb in breadcrumbs %}
-              {% if loop.last %}
-                <li aria-current="page">
-              {% else %}
-                <li>
-              {% endif %}
-                <div class="flex items-center">
-                  <a href="{{ crumb.url }}" class="text-gray-500 hover:text-gray-700">{{ crumb.title }}</a>
-                </div>
-              </li>
-            {% endfor %}
-          </ol>
-        </nav>
-      {% endif %}
-      <!-- Breadcrumbs -->
+        {% if breadcrumbs.length > 0 %}
+          <!-- Breadcrumbs -->
+          <nav class="not-prose mb-6 text-sm hidden md:block">
+            <ol class="flex space-x-3">
+              {% set classes = ["after:content-['/']", "after:ml-3"] %}
+              <li class="{{ classes | join(" ") }}"><a href="{{ crumb.url }}" class="hover:underline">{{site.title}}</a></li>
+
+              {% for crumb in breadcrumbs %}
+                {% if loop.last %}
+                  {% set classes = ["text-slate-500"] %}
+                {% endif %}
+
+                <li class="{{ classes | join(" ") }}"><a href="{{ crumb.url }}" class="hover:underline">{{ crumb.title }}</a></li>
+              {% endfor %}
+            </ol>
+          </nav>
+          <!-- Breadcrumbs -->
+        {% endif %}
+
+        <h1>{{ title }}</h1>
+        <p class="lead">{{ tagline }}</p>
+
+        {% if layout === "page" and content | toc %}
+          <aside class="text-sm">
+            <strong>In this article:</strong>
+
+            {{ content | toc | safe }}
+          </aside>
+        {% endif %}
+      </header>
 
       <!-- Content -->
-      {% block content %}
-      {% endblock %}
+      <div class="pt-8">
+        {% block content %}
+        {% endblock %}
+      </div>
       <!-- Content -->
     </main>
     <footer class="text-sm py-2 sm:py-4">

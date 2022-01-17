@@ -1,30 +1,25 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+
   {% set sections = collections.all | eleventyNavigation %}
 
   <div class="space-y-8">
-    <header class="prose pb-6 border-b">
-      <h1>Welcome to {{ site.title }}</h1>
-      <p class="lead">{{ tagline }}</p>
-    </header>
-
     {% for section in sections %}
       {% if section.url !== "/" %}
-        <section>
-          <div class="flex flex-col md:flex-row items-baseline pb-4">
+        <section class="space-y-4">
+          <div class="flex flex-col md:flex-row items-baseline">
             <h2 class="text-2xl font-bold">{{ section.title }}</h2>
-            <a href="{{ section.url }}" class="mt-2 md:ml-4 md:mt-0 hover:underline">View all <span class="sr-only">"{{ section.title }}" articles</span> &rarr;</a>
+            <a href="{{ section.url }}" class="ml-0 md:ml-4 mt-2 md:mt-0 hover:underline">View all <span class="sr-only">{{ section.title }} articles</span> &rarr;</a>
           </div>
-
-          <ul class="divide-y border rounded-md overflow-hidden">
+          <ul class="overflow-hidden rounded-md border border-slate-200 dark:border-slate-700 divide-y divide-slate-200 dark:divide-slate-700">
             {% for child in section.children %}
               <li>
-                <a href="{{ child.url }}" class="block p-4 flex items-center justify-between hover:bg-gray-100">
+                <a href="{{ child.url }}" class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800">
                   <div>
-                    <h3 class="font-medium">{{ child.title }}</h3>
+                    <h3 class="font-semibold">{{ child.title }}</h3>
                     {% if child.tagline %}
-                      <p class="text-sm text-gray-600">{{ child.tagline }}</p>
+                      <p class="text-slate-500 text-sm">{{ child.tagline }}</p>
                     {% endif %}
                   </div>
                   <span>&rarr;</span>
@@ -36,4 +31,5 @@
       {% endif %}
     {% endfor %}
   </div>
+
 {% endblock %}

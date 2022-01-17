@@ -1,23 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-
-  <div class="prose">
-    <header class="pb-4 mb-4 border-b">
-      <h1>{{ title }}</h1>
-      <p class="lead">{{ tagline }}</p>
-
-      {% if content | toc %}
-        <aside class="mb-8 text-sm">
-          <strong>In this article:</strong>
-          {{ content | toc | safe }}
-        </aside>
-      {% endif %}
-    </header>
-
-    <article>
-      {{ content | safe }}
-    </article>
-  </div>
-
+  <article class="prose prose-slate dark:prose-invert">
+    {{ content | safe }}
+  </article>
 {% endblock %}
