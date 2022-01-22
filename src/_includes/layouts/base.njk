@@ -28,16 +28,22 @@
         {% if breadcrumbs.length > 0 %}
           <!-- Breadcrumbs -->
           <nav class="not-prose mb-6 text-sm hidden md:block">
-            <ol class="flex space-x-3">
+            <ol class="flex space-x-3" itemscope itemtype="https://schema.org/BreadcrumbList">
               {% set classes = ["after:content-['/']", "after:ml-3"] %}
-              <li class="{{ classes | join(" ") }}"><a href="/" class="hover:underline">{{site.title}}</a></li>
+              <li class="{{ classes | join(" ") }}" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/" class="hover:underline"><span itemprop="name">{{site.title}}</span></a>
+                <meta itemprop="position" content="1" />
+              </li>
 
               {% for crumb in breadcrumbs %}
                 {% if loop.last %}
                   {% set classes = ["text-slate-500"] %}
                 {% endif %}
 
-                <li class="{{ classes | join(" ") }}"><a href="{{ crumb.url }}" class="hover:underline">{{ crumb.title }}</a></li>
+                <li class="{{ classes | join(" ") }}" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="{{ crumb.url }}" class="hover:underline"><span itemprop="name">{{ crumb.title }}</span></a>
+                  <meta itemprop="position" content="{{ loop.index + 1 }}" />
+                </li>
               {% endfor %}
             </ol>
           </nav>
