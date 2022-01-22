@@ -1,6 +1,7 @@
 module.exports = {
   transforms: {
-    css: require('./transforms/css')
+    css: require('./transforms/css'),
+    html: require('./transforms/html')
   },
   shortcodes: {
     now: require('./shortcodes/now'),
