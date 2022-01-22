@@ -1,79 +1,65 @@
-
-
-
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simple API | Serverless Architecture</title>
-  <link rel="stylesheet" href="/css/style.css?v=1642867569367">
-</head>
 
-<body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
-  <div class="flex flex-col min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 divide-y-2">
-    <header class="py-4 sm:py-6 lg:py-8">
-      <a href="/" class="text-xl font-semibold hover:underline">Serverless Architecture</a>
-    </header>
-    <main class="flex-grow py-8 divide-y">
-      <header class="prose prose-slate dark:prose-invert pb-8">
-        
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Simple API | Serverless Architecture</title>
+    <link rel="stylesheet" href="/css/style.css?v=1642868753867">
+  </head>
 
-        
-          <!-- Breadcrumbs -->
+  <body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
+    <div class="flex flex-col min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 divide-y-2">
+      <header class="py-4 sm:py-6 lg:py-8"><a href="/" class="text-xl font-semibold hover:underline">Serverless Architecture</a></header>
+      <main class="flex-grow py-8 divide-y">
+        <header class="prose prose-slate dark:prose-invert pb-8">
           <nav class="not-prose mb-6 text-sm hidden md:block">
             <ol class="flex space-x-3">
-              
               <li class="after:content-[&#39;/&#39;] after:ml-3"><a href="" class="hover:underline">Serverless Architecture</a></li>
-
-              
-                
-
-                <li class="after:content-[&#39;/&#39;] after:ml-3"><a href="/reference-architecture/" class="hover:underline">Reference Architecture</a></li>
-              
-                
-                  
-                
-
-                <li class="text-slate-500"><a href="/reference-architecture/simple-api/" class="hover:underline">Simple API</a></li>
-              
+              <li class="after:content-[&#39;/&#39;] after:ml-3"><a href="/reference-architecture/" class="hover:underline">Reference Architecture</a></li>
+              <li class="text-slate-500"><a href="/reference-architecture/simple-api/" class="hover:underline">Simple API</a></li>
             </ol>
           </nav>
-          <!-- Breadcrumbs -->
-        
-
-        <h1>Simple API</h1>
-        <p class="lead">Reference architecture for a simple serverless API.</p>
-
-        
-          <aside class="text-sm">
-            <strong>In this article:</strong>
-
-            <nav class="prose-ol:pl-0 prose-li:list-none prose-li:pl-0" >
-        <ol><li><a href="#generic">Generic</a></li><li><a href="#aws">AWS</a></li></ol>
-      </nav>
+          <h1>Simple API</h1>
+          <p class="lead">Reference architecture for a simple serverless API.</p>
+          <aside class="text-sm"><strong>In this article:</strong>
+            <nav class="prose-ol:pl-0 prose-li:list-none prose-li:pl-0">
+              <ol>
+                <li><a href="#generic">Generic</a></li>
+                <li><a href="#aws">AWS</a></li>
+              </ol>
+            </nav>
           </aside>
-        
-      </header>
+        </header>
+        <div class="pt-8">
+          <article class="prose prose-slate dark:prose-invert">
+            <h2 id="generic" tabindex="-1">Generic</h2>
+            <p><svg xmlns="http://www.w3.org/2000/svg" height="162" preserveAspectRatio="none" style="width:175px;height:162px" width="175">
+                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="96" x="39" y="10" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="49" y="31.139">API Gateway</text>
+                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="154" x="10" y="63.969" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="134" x="20" y="85.107">Function-as-a-Service</text>
+                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="138" x="18" y="117.938" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="118" x="28" y="139.076">Backend database</text>
+                <path style="stroke:#a80036;stroke-width:1.5" d="M87 43.969v20" />
+                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m83 53.969 4 10 4-10-4 4z" />
+                <path style="stroke:#a80036;stroke-width:1.5" d="M87 97.938v20" />
+                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m83 107.938 4 10 4-10-4 4z" />
+              </svg></p>
+            <h2 id="aws" tabindex="-1">AWS</h2>
+            <p><svg xmlns="http://www.w3.org/2000/svg" height="162" preserveAspectRatio="none" style="width:169px;height:162px" width="169">
+                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="148" x="10" y="10" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="128" x="20" y="31.139">Amazon API Gateway</text>
+                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="100" x="34" y="63.969" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="44" y="85.107">AWS Lambda</text>
+                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="139" x="14.5" y="117.938" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="119" x="24.5" y="139.076">Amazon DynamoDB</text>
+                <path style="stroke:#a80036;stroke-width:1.5" d="M84 43.969v20" />
+                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m80 53.969 4 10 4-10-4 4z" />
+                <path style="stroke:#a80036;stroke-width:1.5" d="M84 97.938v20" />
+                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m80 107.938 4 10 4-10-4 4z" />
+              </svg></p>
+          </article>
+        </div>
+      </main>
+      <footer class="text-sm py-2 sm:py-4">
+        <p>&copy; 2022 <a href="https://jakemulley.com/" class="hover:underline">Jake Mulley</a></p>
+      </footer>
+    </div>
+  </body>
 
-      <!-- Content -->
-      <div class="pt-8">
-        
-  <article class="prose prose-slate dark:prose-invert">
-    <h2 id="generic" tabindex="-1">Generic</h2>
-<p><svg xmlns="http://www.w3.org/2000/svg" height="162" preserveAspectRatio="none" style="width:175px;height:162px" width="175"><rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="96" x="39" y="10"/><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="49" y="31.139">API Gateway</text><rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="154" x="10" y="63.969"/><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="134" x="20" y="85.107">Function-as-a-Service</text><rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="138" x="18" y="117.938"/><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="118" x="28" y="139.076">Backend database</text><path style="stroke:#a80036;stroke-width:1.5" d="M87 43.969v20"/><path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m83 53.969 4 10 4-10-4 4z"/><path style="stroke:#a80036;stroke-width:1.5" d="M87 97.938v20"/><path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m83 107.938 4 10 4-10-4 4z"/></svg></p>
-<h2 id="aws" tabindex="-1">AWS</h2>
-<p><svg xmlns="http://www.w3.org/2000/svg" height="162" preserveAspectRatio="none" style="width:169px;height:162px" width="169"><rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="148" x="10" y="10"/><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="128" x="20" y="31.139">Amazon API Gateway</text><rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="100" x="34" y="63.969"/><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="44" y="85.107">AWS Lambda</text><rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="139" x="14.5" y="117.938"/><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="119" x="24.5" y="139.076">Amazon DynamoDB</text><path style="stroke:#a80036;stroke-width:1.5" d="M84 43.969v20"/><path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m80 53.969 4 10 4-10-4 4z"/><path style="stroke:#a80036;stroke-width:1.5" d="M84 97.938v20"/><path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m80 107.938 4 10 4-10-4 4z"/></svg></p>
-
-  </article>
-
-      </div>
-      <!-- Content -->
-    </main>
-    <footer class="text-sm py-2 sm:py-4">
-      <p>&copy; 2022 <a href="https://jakemulley.com/" class="hover:underline">Jake Mulley</a></p>
-    </footer>
-  </div>
-</body>
 </html>
