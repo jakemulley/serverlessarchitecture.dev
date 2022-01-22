@@ -1,4 +1,4 @@
-const { transforms, shortcodes, plugins, libraries } = require('./src/_11ty')
+const { transforms, shortcodes, plugins, libraries, customExtensions } = require('./src/_11ty')
 
 module.exports = eleventyConfig => {
   // Layout aliases
@@ -35,6 +35,15 @@ module.exports = eleventyConfig => {
   // Libraries
   for (const name of Object.keys(libraries)) {
     eleventyConfig.setLibrary(name, libraries[name])
+  }
+
+  // Custom template extensions
+  for (const name of Object.keys(customExtensions)) {
+    eleventyConfig.addTemplateFormats(name)
+    eleventyConfig.addExtension(name, {
+      ...customExtensions[name].options,
+      compile: customExtensions[name].compile
+    })
   }
 
   return {
