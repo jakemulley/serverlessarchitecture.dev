@@ -4,7 +4,8 @@ module.exports = {
   },
   shortcodes: {
     now: require('./shortcodes/now'),
-    icon: require('./shortcodes/icon')
+    icon: require('./shortcodes/icon'),
+    asyncUml2Svg: require('./shortcodes/uml-to-svg')
   },
   libraries: {
     md: require('./libraries/markdown')
