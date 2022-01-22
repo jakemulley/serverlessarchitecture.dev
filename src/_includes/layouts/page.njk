@@ -3,9 +3,5 @@
 {% block content %}
   <article class="prose prose-slate dark:prose-invert">
     {{ content | safe }}
-
-    {% if diagram %}
-      {% asyncUml2Svg page.url + "diagram.uml" %}
-    {% endif %}
   </article>
 {% endblock %}

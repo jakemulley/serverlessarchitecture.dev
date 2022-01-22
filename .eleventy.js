@@ -9,6 +9,9 @@ module.exports = eleventyConfig => {
   // Passthroughs
   eleventyConfig.addPassthroughCopy('./src/CNAME')
 
+  // Watch targets
+  eleventyConfig.addWatchTarget('./src/**/*.uml')
+
   // Transforms
   for (const name of Object.keys(transforms)) {
     eleventyConfig.addTransform(name, transforms[name])
@@ -37,6 +40,7 @@ module.exports = eleventyConfig => {
     dir: {
       input: './src',
       output: './docs'
-    }
+    },
+    markdownTemplateEngine: 'njk'
   }
 }

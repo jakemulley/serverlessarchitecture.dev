@@ -1,0 +1,7 @@
+@startuml
+skinparam shadowing false
+
+:API Gateway;
+:Function-as-a-Service;
+:Backend database;
+@enduml
