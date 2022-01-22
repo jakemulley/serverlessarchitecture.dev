@@ -16,7 +16,11 @@ module.exports = eleventyConfig => {
 
   // Shortcodes
   for (const name of Object.keys(shortcodes)) {
-    eleventyConfig.addShortcode(name, shortcodes[name])
+    if (name.includes('async')) {
+      eleventyConfig.addAsyncShortcode(name, shortcodes[name])
+    } else {
+      eleventyConfig.addShortcode(name, shortcodes[name])
+    }
   }
 
   // Plugins
