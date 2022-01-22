@@ -1,5 +1,6 @@
 module.exports = {
   transforms: {
+    css: require('./transforms/css'),
     html: require('./transforms/html')
   },
   shortcodes: {
@@ -16,14 +17,6 @@ module.exports = {
     'eleventy-plugin-toc': {
       tags: ['h2'],
       wrapperClass: 'prose-ol:pl-0 prose-li:list-none prose-li:pl-0'
-    }
-  },
-  customExtensions: {
-    scss: {
-      options: {
-        outputFileExtension: 'css'
-      },
-      compile: require('./custom-extensions/scss')
     }
   }
 }
