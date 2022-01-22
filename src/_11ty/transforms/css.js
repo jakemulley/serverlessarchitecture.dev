@@ -7,12 +7,14 @@ const plugins = [
 
 const postcss = require('postcss')(plugins)
 
-module.exports = async content => {
-  const { css } = await postcss.process(content, {
-    from: undefined
-  })
+module.exports = async function (content) {
+  if (this.outputPath.endsWith('.css')) {
+    const { css } = await postcss.process(content, {
+      from: undefined
+    })
 
-  return async data => {
     return css
   }
+
+  return content
 }
