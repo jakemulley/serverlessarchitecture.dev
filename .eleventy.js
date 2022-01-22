@@ -8,6 +8,7 @@ module.exports = eleventyConfig => {
 
   // Passthroughs
   eleventyConfig.addPassthroughCopy('./src/CNAME')
+  eleventyConfig.addPassthroughCopy('./src/robots.txt')
 
   // Watch targets
   eleventyConfig.addWatchTarget('./src/**/*.uml')
