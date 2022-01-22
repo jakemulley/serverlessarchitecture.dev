@@ -27,7 +27,7 @@
           <nav class="not-prose mb-6 text-sm hidden md:block">
             <ol class="flex space-x-3">
               {% set classes = ["after:content-['/']", "after:ml-3"] %}
-              <li class="{{ classes | join(" ") }}"><a href="{{ crumb.url }}" class="hover:underline">{{site.title}}</a></li>
+              <li class="{{ classes | join(" ") }}"><a href="/" class="hover:underline">{{site.title}}</a></li>
 
               {% for crumb in breadcrumbs %}
                 {% if loop.last %}
