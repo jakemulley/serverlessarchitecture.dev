@@ -3,8 +3,16 @@
   
     
       <url>
+         <loc>https://serverlessarchitecture.dev/css/style.css</loc>
+         <lastmod>2022-01-22T18:45:52.222Z</lastmod>
+         <changefreq>monthly</changefreq>
+         <priority>0.8</priority>
+      </url>
+    
+    
+      <url>
          <loc>https://serverlessarchitecture.dev/getting-started/</loc>
-         <lastmod>2022-01-22T18:25:37.695Z</lastmod>
+         <lastmod>2022-01-22T18:45:52.222Z</lastmod>
          <changefreq>monthly</changefreq>
          <priority>0.8</priority>
       </url>
@@ -12,7 +20,7 @@
     
       <url>
          <loc>https://serverlessarchitecture.dev/getting-started/introduction/</loc>
-         <lastmod>2022-01-22T18:25:37.695Z</lastmod>
+         <lastmod>2022-01-22T18:45:52.222Z</lastmod>
          <changefreq>monthly</changefreq>
          <priority>0.8</priority>
       </url>
@@ -20,7 +28,7 @@
     
       <url>
          <loc>https://serverlessarchitecture.dev/</loc>
-         <lastmod>2022-01-22T18:25:37.695Z</lastmod>
+         <lastmod>2022-01-22T18:45:52.222Z</lastmod>
          <changefreq>monthly</changefreq>
          <priority>0.8</priority>
       </url>
@@ -28,7 +36,7 @@
     
       <url>
          <loc>https://serverlessarchitecture.dev/reference-architecture/</loc>
-         <lastmod>2022-01-22T18:25:37.695Z</lastmod>
+         <lastmod>2022-01-22T18:45:52.222Z</lastmod>
          <changefreq>monthly</changefreq>
          <priority>0.8</priority>
       </url>
@@ -36,7 +44,7 @@
     
       <url>
          <loc>https://serverlessarchitecture.dev/reference-architecture/simple-api/</loc>
-         <lastmod>2022-01-22T18:25:37.695Z</lastmod>
+         <lastmod>2022-01-22T18:45:52.222Z</lastmod>
          <changefreq>monthly</changefreq>
          <priority>0.8</priority>
       </url>
