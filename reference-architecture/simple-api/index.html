@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Simple API | Serverless Architecture</title>
-    <link rel="stylesheet" href="/css/style.css?v=1642878714131">
+    <link rel="stylesheet" href="/css/style.css?v=1642884917826">
   </head>
 
   <body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
@@ -34,24 +34,26 @@
         <div class="pt-8">
           <article class="prose prose-slate dark:prose-invert">
             <h2 id="generic" tabindex="-1">Generic</h2>
-            <p><svg xmlns="http://www.w3.org/2000/svg" height="162" preserveAspectRatio="none" style="width:175px;height:162px" width="175">
-                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="96" x="39" y="10" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="49" y="31.139">API Gateway</text>
-                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="154" x="10" y="63.969" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="134" x="20" y="85.107">Function-as-a-Service</text>
-                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="138" x="18" y="117.938" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="118" x="28" y="139.076">Backend database</text>
-                <path style="stroke:#a80036;stroke-width:1.5" d="M87 43.969v20" />
-                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m83 53.969 4 10 4-10-4 4z" />
-                <path style="stroke:#a80036;stroke-width:1.5" d="M87 97.938v20" />
-                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m83 107.938 4 10 4-10-4 4z" />
+            <p><svg baseProfile="full" width="216" height="199" xmlns="http://www.w3.org/2000/svg" style="font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;stroke-linejoin:round;stroke-linecap:round">
+                <path style="stroke:none;fill:transparent" d="M0 0h216v199H0z" />
+                <path d="M108.5 51.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
+                <path d="m103.2 71.2 5.3 6.6 5.3-6.6-5.3 13.3ZM113.8 57.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
+                <path d="M108.5 122.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
+                <path d="m103.2 142.2 5.3 6.6 5.3-6.6-5.3 13.3ZM113.8 128.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
+                <path data-name="API Gateway" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M50.5 13.5h117v31h-117z" /><text x="109" y="35" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="API Gateway">API Gateway</text>
+                <path data-name="Function-as-a-Service" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M13.5 84.5h190v31h-190z" /><text x="108.5" y="106" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Function-as-a-Service">Function-as-a-Service</text>
+                <path data-name="Backend database" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M26.5 155.5h164v31h-164z" /><text x="108.5" y="177" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Backend database">Backend database</text>
               </svg></p>
             <h2 id="aws" tabindex="-1">AWS</h2>
-            <p><svg xmlns="http://www.w3.org/2000/svg" height="162" preserveAspectRatio="none" style="width:169px;height:162px" width="169">
-                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="148" x="10" y="10" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="128" x="20" y="31.139">Amazon API Gateway</text>
-                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="100" x="34" y="63.969" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="44" y="85.107">AWS Lambda</text>
-                <rect fill="#FEFECE" height="33.969" rx="12.5" ry="12.5" style="stroke:#a80036;stroke-width:1.5" width="139" x="14.5" y="117.938" /><text font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="119" x="24.5" y="139.076">Amazon DynamoDB</text>
-                <path style="stroke:#a80036;stroke-width:1.5" d="M84 43.969v20" />
-                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m80 53.969 4 10 4-10-4 4z" />
-                <path style="stroke:#a80036;stroke-width:1.5" d="M84 97.938v20" />
-                <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m80 107.938 4 10 4-10-4 4z" />
+            <p><svg baseProfile="full" width="212" height="199" xmlns="http://www.w3.org/2000/svg" style="font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;stroke-linejoin:round;stroke-linecap:round">
+                <path style="stroke:none;fill:transparent" d="M0 0h212v199H0z" />
+                <path d="M106.5 51.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
+                <path d="m101.2 71.2 5.3 6.6 5.3-6.6-5.3 13.3ZM111.8 57.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
+                <path d="M106.5 122.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
+                <path d="m101.2 142.2 5.3 6.6 5.3-6.6-5.3 13.3ZM111.8 128.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
+                <path data-name="Amazon API Gateway" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M13.5 13.5h186v31h-186z" /><text x="106.5" y="35" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Amazon API Gateway">Amazon API Gateway</text>
+                <path data-name="AWS Lambda" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M45.5 84.5h123v31h-123z" /><text x="107" y="106" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="AWS Lambda">AWS Lambda</text>
+                <path data-name="Amazon DynamoDB" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M20.5 155.5h173v31h-173z" /><text x="107" y="177" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Amazon DynamoDB">Amazon DynamoDB</text>
               </svg></p>
           </article>
         </div>
