@@ -1,7 +1,2 @@
-@startuml
-skinparam shadowing false
-
-:Amazon API Gateway;
-:AWS Lambda;
-:Amazon DynamoDB;
-@enduml
+[Amazon API Gateway] <-> [AWS Lambda]
+[AWS Lambda] <-> [Amazon DynamoDB]
