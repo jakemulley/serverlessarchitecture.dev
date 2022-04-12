@@ -30,7 +30,7 @@
     "html-minifier-terser": "^7.0.0-alpha.2",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.6.2",
-    "nomnoml": "^1.4.0",
+    "nomnoml": "^1.5.0",
     "postcss": "^8.4.12",
     "postcss-import": "^14.1.0",
     "pretty": "^2.0.0",
