@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Reference architecture for a simple serverless API.">
     <title>Simple API | Serverless Architecture</title>
-    <link rel="stylesheet" href="/css/style.css?v=1649691138873">
+    <link rel="stylesheet" href="/css/style.css?v=1649762694658">
   </head>
 
   <body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
@@ -41,26 +41,46 @@
         <div class="pt-8">
           <article class="prose prose-slate dark:prose-invert">
             <h2 id="generic" tabindex="-1">Generic</h2>
-            <p><svg baseProfile="full" width="216" height="199" xmlns="http://www.w3.org/2000/svg" style="font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;stroke-linejoin:round;stroke-linecap:round">
-                <path style="stroke:none;fill:transparent" d="M0 0h216v199H0z" />
-                <path d="M108.5 51.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
-                <path d="m103.2 71.2 5.3 6.6 5.3-6.6-5.3 13.3ZM113.8 57.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
-                <path d="M108.5 122.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
-                <path d="m103.2 142.2 5.3 6.6 5.3-6.6-5.3 13.3ZM113.8 128.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
-                <path data-name="API Gateway" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M50.5 13.5h117v31h-117z" /><text x="109" y="35" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="API Gateway">API Gateway</text>
-                <path data-name="Function-as-a-Service" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M13.5 84.5h190v31h-190z" /><text x="108.5" y="106" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Function-as-a-Service">Function-as-a-Service</text>
-                <path data-name="Backend database" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M26.5 155.5h164v31h-164z" /><text x="108.5" y="177" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Backend database">Backend database</text>
+            <p><svg baseProfile="full" width="216" height="199" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" font-size="16" font-family="system-ui, sans-serif" font-weight="bold">
+                  <path stroke="none" d="M.5.5h216v199H.5z" fill="transparent" />
+                  <g font-weight="normal" fill="currentColor">
+                    <path d="M108.5 51.2V77.833 77.8" fill="none" />
+                    <path d="m103.2 71.2 5.3 6.6 5.3-6.6-5.3 13.3ZM113.8 57.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" />
+                    <path d="M108.5 122.2V148.833v-.033" fill="none" />
+                    <path d="m103.2 142.2 5.3 6.6 5.3-6.6-5.3 13.3ZM113.8 128.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" />
+                    <g data-name="API Gateway">
+                      <path data-name="API Gateway" d="M50.5 13.5h117v31h-117z" fill="transparent" /><text x="50.5" y="13.5" stroke="none" text-anchor="middle" data-name="API Gateway" transform="translate(58.5 21.5)" font-weight="bold">API Gateway</text>
+                    </g>
+                    <g data-name="Function-as-a-Service">
+                      <path data-name="Function-as-a-Service" d="M13.5 84.5h190v31h-190z" fill="transparent" /><text x="87" y="13.5" stroke="none" text-anchor="middle" data-name="Function-as-a-Service" transform="translate(21.5 92.5)" font-weight="bold">Function-as-a-Service</text>
+                    </g>
+                    <g data-name="Backend database">
+                      <path data-name="Backend database" d="M26.5 155.5h164v31h-164z" fill="transparent" /><text x="74" y="13.5" stroke="none" text-anchor="middle" data-name="Backend database" transform="translate(34.5 163.5)" font-weight="bold">Backend database</text>
+                    </g>
+                  </g>
+                </g>
               </svg></p>
             <h2 id="aws" tabindex="-1">AWS</h2>
-            <p><svg baseProfile="full" width="212" height="199" xmlns="http://www.w3.org/2000/svg" style="font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;stroke-linejoin:round;stroke-linecap:round">
-                <path style="stroke:none;fill:transparent" d="M0 0h212v199H0z" />
-                <path d="M106.5 51.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
-                <path d="m101.2 71.2 5.3 6.6 5.3-6.6-5.3 13.3ZM111.8 57.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
-                <path d="M106.5 122.2v26.6h0" style="stroke:currentColor;fill:none;stroke-dasharray:none;stroke-width:3" />
-                <path d="m101.2 142.2 5.3 6.6 5.3-6.6-5.3 13.3ZM111.8 128.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" style="stroke:currentColor;fill:currentColor;stroke-dasharray:none;stroke-width:3" />
-                <path data-name="Amazon API Gateway" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M13.5 13.5h186v31h-186z" /><text x="106.5" y="35" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Amazon API Gateway">Amazon API Gateway</text>
-                <path data-name="AWS Lambda" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M45.5 84.5h123v31h-123z" /><text x="107" y="106" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="AWS Lambda">AWS Lambda</text>
-                <path data-name="Amazon DynamoDB" style="stroke:currentColor;fill:transparent;stroke-dasharray:none;stroke-width:3" d="M20.5 155.5h173v31h-173z" /><text x="107" y="177" style="fill:currentColor;font:700 12pt system-ui,sans-serif,Helvetica,sans-serif;text-anchor:middle" data-name="Amazon DynamoDB">Amazon DynamoDB</text>
+            <p><svg baseProfile="full" width="212" height="199" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" font-size="16" font-family="system-ui, sans-serif" font-weight="bold">
+                  <path stroke="none" d="M.5.5h212v199H.5z" fill="transparent" />
+                  <g font-weight="normal" fill="currentColor">
+                    <path d="M106.5 51.2V77.833 77.8" fill="none" />
+                    <path d="m101.2 71.2 5.3 6.6 5.3-6.6-5.3 13.3ZM111.8 57.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" />
+                    <path d="M106.5 122.2V148.833v-.033" fill="none" />
+                    <path d="m101.2 142.2 5.3 6.6 5.3-6.6-5.3 13.3ZM111.8 128.8l-5.3-6.6-5.3 6.6 5.3-13.3Z" />
+                    <g data-name="Amazon API Gateway">
+                      <path data-name="Amazon API Gateway" d="M13.5 13.5h186v31h-186z" fill="transparent" /><text x="85" y="13.5" stroke="none" text-anchor="middle" data-name="Amazon API Gateway" transform="translate(21.5 21.5)" font-weight="bold">Amazon API Gateway</text>
+                    </g>
+                    <g data-name="AWS Lambda">
+                      <path data-name="AWS Lambda" d="M45.5 84.5h123v31h-123z" fill="transparent" /><text x="53.5" y="13.5" stroke="none" text-anchor="middle" data-name="AWS Lambda" transform="translate(53.5 92.5)" font-weight="bold">AWS Lambda</text>
+                    </g>
+                    <g data-name="Amazon DynamoDB">
+                      <path data-name="Amazon DynamoDB" d="M20.5 155.5h173v31h-173z" fill="transparent" /><text x="78.5" y="13.5" stroke="none" text-anchor="middle" data-name="Amazon DynamoDB" transform="translate(28.5 163.5)" font-weight="bold">Amazon DynamoDB</text>
+                    </g>
+                  </g>
+                </g>
               </svg></p>
           </article>
         </div>
