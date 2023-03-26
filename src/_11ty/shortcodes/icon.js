@@ -1,5 +1,6 @@
-const simpleIcons = require('simple-icons')
+const simpleIcons = require('simple-icons/icons')
 
 module.exports = (icon, classes) => {
-  return `<div class="${classes}">${simpleIcons.Get(icon).svg}</div>`
+  const firstChar = icon.charAt(0).toUpperCase()
+  return `<div class="${classes}">${simpleIcons[`si${firstChar}${icon.slice(1)}`].svg}</div>`
 }
