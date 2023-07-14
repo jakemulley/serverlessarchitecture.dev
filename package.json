@@ -31,7 +31,7 @@
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.7",
     "nomnoml": "^1.6.2",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.26",
     "postcss-import": "^15.1.0",
     "pretty": "^2.0.0",
     "simple-icons": "^9.3.0",
