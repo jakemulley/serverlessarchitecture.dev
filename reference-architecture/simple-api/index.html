@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Reference architecture for a simple serverless API.">
     <title>Simple API | Serverless Architecture</title>
-    <link rel="stylesheet" href="/css/style.css?v=1698568209794">
+    <link rel="stylesheet" href="/css/style.css?v=1712702392934">
   </head>
 
   <body class="antialiased bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
@@ -42,12 +42,13 @@
           <article class="prose prose-slate dark:prose-invert">
             <h2 id="generic" tabindex="-1">Generic</h2>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="216" height="199" baseProfile="full">
+                <desc>#arrowSize: 1 #bendSize: 0.3 #direction: down #gutter: 5 #edgeMargin: 0 #gravity: 1 #edges: rounded #background: transparent #fill: transparent #fillArrows: false #font: system-ui, sans-serif #fontSize: 12 #leading: 1.25 #lineWidth: 3 #padding: 8 #spacing: 40 #stroke: currentColor #zoom: 1 #acyclicer: greedy #ranker: network-simplex [API Gateway] &lt;-&gt; [Function-as-a-Service] [Function-as-a-Service] &lt;-&gt; [Backend database]</desc>
                 <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
                   <path fill="transparent" stroke="none" d="M0 0h216v199H0z" />
                   <g fill="currentColor" font-weight="normal">
-                    <path fill="none" d="M108 50.7V77.333 77.3" />
+                    <path fill="none" d="M108 50.7v26.633-.033" />
                     <path d="m102.7 70.7 5.3 6.6 5.3-6.6L108 84ZM113.3 57.3l-5.3-6.6-5.3 6.6L108 44Z" />
-                    <path fill="none" d="M108 121.7V148.333v-.033" />
+                    <path fill="none" d="M108 121.7v26.633-.033" />
                     <path d="m102.7 141.7 5.3 6.6 5.3-6.6L108 155ZM113.3 128.3l-5.3-6.6-5.3 6.6L108 115Z" />
                     <g data-name="API Gateway">
                       <path fill="transparent" d="M49.5 13h117v31h-117z" data-name="API Gateway" /><text x="50.5" y="13.5" stroke="none" data-name="API Gateway" font-weight="bold" text-anchor="middle" transform="translate(57.5 21)">API Gateway</text>
@@ -63,12 +64,13 @@
               </svg></p>
             <h2 id="aws" tabindex="-1">AWS</h2>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="212" height="199" baseProfile="full">
+                <desc>#arrowSize: 1 #bendSize: 0.3 #direction: down #gutter: 5 #edgeMargin: 0 #gravity: 1 #edges: rounded #background: transparent #fill: transparent #fillArrows: false #font: system-ui, sans-serif #fontSize: 12 #leading: 1.25 #lineWidth: 3 #padding: 8 #spacing: 40 #stroke: currentColor #zoom: 1 #acyclicer: greedy #ranker: network-simplex [Amazon API Gateway] &lt;-&gt; [AWS Lambda] [AWS Lambda] &lt;-&gt; [Amazon DynamoDB]</desc>
                 <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
                   <path fill="transparent" stroke="none" d="M0 0h212v199H0z" />
                   <g fill="currentColor" font-weight="normal">
-                    <path fill="none" d="M106 50.7V77.333 77.3" />
+                    <path fill="none" d="M106 50.7v26.633-.033" />
                     <path d="m100.7 70.7 5.3 6.6 5.3-6.6L106 84ZM111.3 57.3l-5.3-6.6-5.3 6.6L106 44Z" />
-                    <path fill="none" d="M106 121.7V148.333v-.033" />
+                    <path fill="none" d="M106 121.7v26.633-.033" />
                     <path d="m100.7 141.7 5.3 6.6 5.3-6.6L106 155ZM111.3 128.3l-5.3-6.6-5.3 6.6L106 115Z" />
                     <g data-name="Amazon API Gateway">
                       <path fill="transparent" d="M13 13h186v31H13z" data-name="Amazon API Gateway" /><text x="85" y="13.5" stroke="none" data-name="Amazon API Gateway" font-weight="bold" text-anchor="middle" transform="translate(21 21)">Amazon API Gateway</text>
